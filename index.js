@@ -24,8 +24,8 @@ await connection
     console.log(err);
   });
 
-app.use("/", (req, res) => {
-  res.send("working");
+app.get("/test", (req, res) => {
+  res.json("working");
 });
 app.listen(process.env.PORT || 4000, () => {
   console.log(`server is running on port ${process.env.PORT}`);
